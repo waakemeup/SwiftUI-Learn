@@ -30,10 +30,8 @@ struct MenuView: View {
                                         Text(drink.name)
                                             .font(.system(.body,design:.serif))
                                     }
+                                    .padding(.bottom)
                                 }
-                                
-                                .padding(.bottom)
-                                
                             }
                             .buttonStyle(.plain)
                         } header: {
