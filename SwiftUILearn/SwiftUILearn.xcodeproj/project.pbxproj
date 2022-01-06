@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		E536B1312786948C004DAEAF /* ConfigurationOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = E536B1302786948C004DAEAF /* ConfigurationOption.swift */; };
+		E536B1332786B4CC004DAEAF /* Serving.swift in Sources */ = {isa = PBXBuildFile; fileRef = E536B1322786B4CC004DAEAF /* Serving.swift */; };
+		E536B1352786BD22004DAEAF /* FileManager-DocumentDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E536B1342786BD22004DAEAF /* FileManager-DocumentDirectory.swift */; };
+		E536B1372786BFB2004DAEAF /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = E536B1362786BFB2004DAEAF /* History.swift */; };
 		E595A5EA2774465200B6028C /* SwiftUILearnApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E595A5E92774465200B6028C /* SwiftUILearnApp.swift */; };
 		E595A5EC2774465200B6028C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E595A5EB2774465200B6028C /* ContentView.swift */; };
 		E595A5EE2774465300B6028C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E595A5ED2774465300B6028C /* Assets.xcassets */; };
@@ -22,6 +25,9 @@
 
 /* Begin PBXFileReference section */
 		E536B1302786948C004DAEAF /* ConfigurationOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationOption.swift; sourceTree = "<group>"; };
+		E536B1322786B4CC004DAEAF /* Serving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Serving.swift; sourceTree = "<group>"; };
+		E536B1342786BD22004DAEAF /* FileManager-DocumentDirectory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager-DocumentDirectory.swift"; sourceTree = "<group>"; };
+		E536B1362786BFB2004DAEAF /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 		E595A5E62774465200B6028C /* SwiftUILearn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUILearn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E595A5E92774465200B6028C /* SwiftUILearnApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUILearnApp.swift; sourceTree = "<group>"; };
 		E595A5EB2774465200B6028C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -67,6 +73,9 @@
 			children = (
 				E595A5E92774465200B6028C /* SwiftUILearnApp.swift */,
 				E595A5EB2774465200B6028C /* ContentView.swift */,
+				E536B1322786B4CC004DAEAF /* Serving.swift */,
+				E536B1342786BD22004DAEAF /* FileManager-DocumentDirectory.swift */,
+				E536B1362786BFB2004DAEAF /* History.swift */,
 				E5F1C0AB2774644400CD3778 /* CustomizeView.swift */,
 				E5B622042774544E00650B02 /* MenuView.swift */,
 				E595A5F72774470600B6028C /* menu.json */,
@@ -161,12 +170,15 @@
 			files = (
 				E595A5EC2774465200B6028C /* ContentView.swift in Sources */,
 				E5B622052774544E00650B02 /* MenuView.swift in Sources */,
+				E536B1352786BD22004DAEAF /* FileManager-DocumentDirectory.swift in Sources */,
+				E536B1372786BFB2004DAEAF /* History.swift in Sources */,
 				E595A5FC27744A5700B6028C /* Drink.swift in Sources */,
 				E5B6220127744D0500650B02 /* MenuSection.swift in Sources */,
 				E595A5EA2774465200B6028C /* SwiftUILearnApp.swift in Sources */,
 				E536B1312786948C004DAEAF /* ConfigurationOption.swift in Sources */,
 				E5F1C0AC2774644400CD3778 /* CustomizeView.swift in Sources */,
 				E5B6220327744D5B00650B02 /* Menu.swift in Sources */,
+				E536B1332786B4CC004DAEAF /* Serving.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
