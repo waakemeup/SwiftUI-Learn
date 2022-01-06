@@ -9,8 +9,16 @@ import SwiftUI
 
 struct CustomizeView: View {
     let drink:Drink
+    @EnvironmentObject var menu:Menu
+    
     @State private var size = 0
     @State private var isDecaf = false
+    @State private var extraShots = 0
+    @State private var milk = ConfigurationOption.none
+    @State private var syrup = ConfigurationOption.none
+    
+    
+    
     
     let sizeOptions = ["Small","Medium","Large"]
     
@@ -32,7 +40,30 @@ struct CustomizeView: View {
                 }
                 .pickerStyle(.segmented)
                 
+                if drink.coffeeBased {
+                    Stepper("Extra Shots:\(extraShots)",
+                            value:$extraShots,in:0...8)
+                }
+                
                 Toggle("Decaffeinated",isOn: $isDecaf)
+            }
+            
+            Section("Customization") {
+                Picker("Milk",selection: $milk){
+                    ForEach(menu.milkOptions){ option in
+                        Text(option.name)
+                            .tag(option)
+                    }
+                }
+            }
+            
+            if drink.coffeeBased {
+                Picker("Sryup",selection: $syrup){
+                    ForEach(menu.syrupOptions){ option in
+                        Text(option.name)
+                            .tag(option)
+                    }
+                }
             }
             
             Section("Estimates"){

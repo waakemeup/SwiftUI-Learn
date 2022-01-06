@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E536B1312786948C004DAEAF /* ConfigurationOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = E536B1302786948C004DAEAF /* ConfigurationOption.swift */; };
 		E595A5EA2774465200B6028C /* SwiftUILearnApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E595A5E92774465200B6028C /* SwiftUILearnApp.swift */; };
 		E595A5EC2774465200B6028C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E595A5EB2774465200B6028C /* ContentView.swift */; };
 		E595A5EE2774465300B6028C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E595A5ED2774465300B6028C /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E536B1302786948C004DAEAF /* ConfigurationOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationOption.swift; sourceTree = "<group>"; };
 		E595A5E62774465200B6028C /* SwiftUILearn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUILearn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E595A5E92774465200B6028C /* SwiftUILearnApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUILearnApp.swift; sourceTree = "<group>"; };
 		E595A5EB2774465200B6028C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 				E595A5F72774470600B6028C /* menu.json */,
 				E595A5ED2774465300B6028C /* Assets.xcassets */,
 				E595A5FB27744A5700B6028C /* Drink.swift */,
+				E536B1302786948C004DAEAF /* ConfigurationOption.swift */,
 				E5B6220027744D0500650B02 /* MenuSection.swift */,
 				E5B6220227744D5B00650B02 /* Menu.swift */,
 				E595A5EF2774465300B6028C /* Preview Content */,
@@ -161,6 +164,7 @@
 				E595A5FC27744A5700B6028C /* Drink.swift in Sources */,
 				E5B6220127744D0500650B02 /* MenuSection.swift in Sources */,
 				E595A5EA2774465200B6028C /* SwiftUILearnApp.swift in Sources */,
+				E536B1312786948C004DAEAF /* ConfigurationOption.swift in Sources */,
 				E5F1C0AC2774644400CD3778 /* CustomizeView.swift in Sources */,
 				E5B6220327744D5B00650B02 /* Menu.swift in Sources */,
 			);
