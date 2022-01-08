@@ -8,14 +8,32 @@
 import SwiftUI
 
 struct ContentView: View {
+//    @State var showDetailView = false
+    @State var selectedArticle:Article?
+    
     var body: some View {
         NavigationView {
             List(articles) { article in
                 ArticleRow(article: article)
+                .onTapGesture {
+//                    self.showDetailView = true
+                    self.selectedArticle = article
+                }
+            }
+//            .sheet(isPresented:self.$showDetailView){
+//                if let selectedArticle = self.selectedArticle {
+//                    ArticleDetailView(article: selectedArticle)
+//                }
+//            }
+            
+//            .sheet(item:self.$selectedArticle){   //不覆盖全部，下面那个覆盖全部
+            .fullScreenCover(item:self.$selectedArticle){
+                article in ArticleDetailView(article: article)
             }
 
             .navigationBarTitle("Your Reading")
         }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 
