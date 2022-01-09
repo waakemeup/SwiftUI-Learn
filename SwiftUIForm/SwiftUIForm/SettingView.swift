@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct SettingView: View {
+    @Environment(\.presentationMode) var presentationMode
+    
     private var displayOrders = ["Alphabetical","Show Favorite First","Show Check-in First"]
     
     @State private var selectedOrder = 0
@@ -45,6 +47,21 @@ struct SettingView: View {
                 }
             }
             .navigationBarTitle("Setting")
+            .navigationBarItems(leading:
+                Button(action: {
+                self.presentationMode.wrappedValue.dismiss()
+            }, label: {
+                Text("Cancel")
+                    .foregroundColor(.black)
+            })
+                
+            , trailing: Button(action: {
+                self.presentationMode.wrappedValue.dismiss()
+            }, label:{
+                Text("Save")
+                    .foregroundColor(.black)
+                })
+            )
         }
     }
 }
