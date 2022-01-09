@@ -11,6 +11,7 @@
 		E5AE085C278B177E00ED67C9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AE085B278B177E00ED67C9 /* ContentView.swift */; };
 		E5AE085E278B178100ED67C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5AE085D278B178100ED67C9 /* Assets.xcassets */; };
 		E5AE0861278B178100ED67C9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5AE0860278B178100ED67C9 /* Preview Assets.xcassets */; };
+		E5AE0868278B1C7200ED67C9 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AE0867278B1C7200ED67C9 /* SettingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		E5AE085B278B177E00ED67C9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E5AE085D278B178100ED67C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E5AE0860278B178100ED67C9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E5AE0867278B1C7200ED67C9 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				E5AE0859278B177E00ED67C9 /* SwiftUIFormApp.swift */,
 				E5AE085B278B177E00ED67C9 /* ContentView.swift */,
+				E5AE0867278B1C7200ED67C9 /* SettingView.swift */,
 				E5AE085D278B178100ED67C9 /* Assets.xcassets */,
 				E5AE085F278B178100ED67C9 /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5AE0868278B1C7200ED67C9 /* SettingView.swift in Sources */,
 				E5AE085C278B177E00ED67C9 /* ContentView.swift in Sources */,
 				E5AE085A278B177E00ED67C9 /* SwiftUIFormApp.swift in Sources */,
 			);
