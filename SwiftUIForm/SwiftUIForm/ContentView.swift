@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     
+    var settingStore:SettingStore
+    
     @State var restaurants = [
         Restaurant(name: "Cafe Deadend", type: "Coffee & Tea Shop", phone: "232-923423", image: "cafedeadend", priceLevel: 3),
         Restaurant(name: "Homei", type: "Cafe", phone: "348-233423", image: "homei", priceLevel: 3),
@@ -95,8 +97,7 @@ struct ContentView: View {
                 })
             )
             .sheet(isPresented:$showSettings){
-                SettingView()
-                    
+                SettingView(settingStore: self.settingStore)
             }
         }
         .navigationViewStyle(StackNavigationViewStyle())
@@ -124,7 +125,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(settingStore: SettingStore())
     }
 }
 

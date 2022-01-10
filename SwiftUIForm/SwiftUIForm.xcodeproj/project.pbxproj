@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E58CA0E7278C50EB00391F25 /* SettingStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58CA0E6278C50EB00391F25 /* SettingStore.swift */; };
 		E5AE085A278B177E00ED67C9 /* SwiftUIFormApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AE0859278B177E00ED67C9 /* SwiftUIFormApp.swift */; };
 		E5AE085C278B177E00ED67C9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AE085B278B177E00ED67C9 /* ContentView.swift */; };
 		E5AE085E278B178100ED67C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5AE085D278B178100ED67C9 /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E58CA0E6278C50EB00391F25 /* SettingStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingStore.swift; sourceTree = "<group>"; };
 		E5AE0856278B177E00ED67C9 /* SwiftUIForm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIForm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5AE0859278B177E00ED67C9 /* SwiftUIFormApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIFormApp.swift; sourceTree = "<group>"; };
 		E5AE085B278B177E00ED67C9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -55,6 +57,7 @@
 			children = (
 				E5AE0859278B177E00ED67C9 /* SwiftUIFormApp.swift */,
 				E5AE085B278B177E00ED67C9 /* ContentView.swift */,
+				E58CA0E6278C50EB00391F25 /* SettingStore.swift */,
 				E5AE0867278B1C7200ED67C9 /* SettingView.swift */,
 				E5AE085D278B178100ED67C9 /* Assets.xcassets */,
 				E5AE085F278B178100ED67C9 /* Preview Content */,
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E58CA0E7278C50EB00391F25 /* SettingStore.swift in Sources */,
 				E5AE0868278B1C7200ED67C9 /* SettingView.swift in Sources */,
 				E5AE085C278B177E00ED67C9 /* ContentView.swift in Sources */,
 				E5AE085A278B177E00ED67C9 /* SwiftUIFormApp.swift in Sources */,

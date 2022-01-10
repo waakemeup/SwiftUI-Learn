@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct SwiftUIFormApp: App {
+    var settingStore=SettingStore()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(settingStore: settingStore)
         }
     }
 }
