@@ -67,11 +67,11 @@ struct SettingView: View {
                     .foregroundColor(.black)
                 })
             )
-            .onAppear {
-                self.selectedOrder = self.settingStore.displayOrder
-                self.showCheckInOnly = self.settingStore.showCheckInOnly
-                self.maxPriceLevel = self.settingStore.maxPriceLevel
             }
+        .onAppear {
+            self.selectedOrder = self.settingStore.displayOrder
+            self.showCheckInOnly = self.settingStore.showCheckInOnly
+            self.maxPriceLevel = self.settingStore.maxPriceLevel
         }
     }
 }
