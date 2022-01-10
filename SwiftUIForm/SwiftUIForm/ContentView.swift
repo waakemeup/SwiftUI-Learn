@@ -43,7 +43,8 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List {
-                ForEach(restaurants) { restaurant in
+                ForEach(restaurants.sorted(by: self.settingStore.displayOrder.predicate())) { restaurant in
+                    if self.shouldShowItem(restaurant: restaurant){
                     BasicImageRow(restaurant: restaurant)
                         .contextMenu {
                             
@@ -81,6 +82,7 @@ struct ContentView: View {
                         .onTapGesture {
                             self.selectedRestaurant = restaurant
                         }
+                    }
                 }
                 .onDelete { (indexSet) in
                     self.restaurants.remove(atOffsets: indexSet)
@@ -120,6 +122,10 @@ struct ContentView: View {
         if let index = self.restaurants.firstIndex(where: { $0.id == restaurant.id }) {
             self.restaurants[index].isCheckIn.toggle()
         }
+    }
+    
+    private func shouldShowItem(restaurant:Restaurant)->Bool{
+        return (!self.settingStore.showCheckInOnly || restaurant.isCheckIn) && (restaurant.priceLevel <= self.settingStore.maxPriceLevel)
     }
 }
 
