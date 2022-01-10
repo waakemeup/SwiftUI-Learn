@@ -10,7 +10,7 @@ import SwiftUI
 struct SettingView: View {
     @Environment(\.presentationMode) var presentationMode
     
-    var settingStore:SettingStore
+    @EnvironmentObject var settingStore:SettingStore
 //    private var displayOrders = ["Alphabetical","Show Favorite First","Show Check-in First"]
     
     @State private var selectedOrder = DisplayOrderType.alphabetical
@@ -78,7 +78,7 @@ struct SettingView: View {
 
 struct SettingView_Previews: PreviewProvider {
     static var previews: some View {
-        SettingView(settingStore: SettingStore())
+        SettingView().environmentObject(SettingStore())
     }
 }
 
