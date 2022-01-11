@@ -11,6 +11,7 @@
 		E5724BF0278DA44600AC85AD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5724BEF278DA44600AC85AD /* ContentView.swift */; };
 		E5724BF2278DA44900AC85AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5724BF1278DA44900AC85AD /* Assets.xcassets */; };
 		E5724BF5278DA44900AC85AD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5724BF4278DA44900AC85AD /* Preview Assets.xcassets */; };
+		E5724BFE278DBE6700AC85AD /* UserRegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5724BFD278DBE6700AC85AD /* UserRegistrationViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		E5724BEF278DA44600AC85AD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E5724BF1278DA44900AC85AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E5724BF4278DA44900AC85AD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E5724BFD278DBE6700AC85AD /* UserRegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegistrationViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				E5724BED278DA44600AC85AD /* SwiftUIFormRegistrationUIApp.swift */,
 				E5724BEF278DA44600AC85AD /* ContentView.swift */,
+				E5724BFD278DBE6700AC85AD /* UserRegistrationViewModel.swift */,
 				E5724BF1278DA44900AC85AD /* Assets.xcassets */,
 				E5724BF3278DA44900AC85AD /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5724BFE278DBE6700AC85AD /* UserRegistrationViewModel.swift in Sources */,
 				E5724BF0278DA44600AC85AD /* ContentView.swift in Sources */,
 				E5724BEE278DA44600AC85AD /* SwiftUIFormRegistrationUIApp.swift in Sources */,
 			);
