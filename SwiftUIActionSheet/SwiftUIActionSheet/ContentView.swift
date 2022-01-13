@@ -58,6 +58,16 @@ struct ContentView: View {
                                 Image(systemName:"star")
                             }
                         }
+                        
+                        Button(action:{
+                            //make the selected image checkin
+                            self.setCheckIn(item: restaurant)
+                        }){
+                            HStack{
+                                Text("Check In")
+                                Image(systemName: "checkmark.seal.fill")
+                            }
+                        }
                     }
                     .onTapGesture {
 //                        self.showActionSheet.toggle()
@@ -87,6 +97,9 @@ struct ContentView: View {
                             .destructive(Text("Delete"),action:{
                                 self.delete(item:restaurant)
                             }),
+                            .default(Text("Check In"),action:{
+                                self.setCheckIn(item: restaurant)
+                            }),
                             .cancel()
                         ])
                     }
@@ -109,6 +122,14 @@ struct ContentView: View {
             $0.id == restaurant.id
         }){
             self.restaurants[index].isFavorite.toggle()
+        }
+    }
+    
+    private func setCheckIn(item restaurant:Restaurant){
+        if let index = self.restaurants.firstIndex(where:{
+            $0.id == restaurant.id
+        }){
+            self.restaurants[index].isCheckIn.toggle()
         }
     }
     
@@ -138,6 +159,11 @@ struct BasicImageRow: View {
                 .frame(width: 40, height: 40)
                 .cornerRadius(5)
             Text(restaurant.name)
+            
+            if restaurant.isCheckIn {
+                Image(systemName:"checkmark.seal.fill")
+                    .foregroundColor(.red)
+            }
             
             if restaurant.isFavorite {
                 Spacer()
