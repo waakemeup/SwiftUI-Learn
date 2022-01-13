@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
+//    @State private var showActionSheet = false
+    @State private var selectedRestaurant:Restaurant?
+    
     @State var restaurants = [ Restaurant(name: "Cafe Deadend", image: "cafedeadend"),
                    Restaurant(name: "Homei", image: "homei"),
                    Restaurant(name: "Teakha", image: "teakha"),
@@ -30,8 +33,6 @@ struct ContentView: View {
                    Restaurant(name: "Royal Oak", image: "royaloak"),
                    Restaurant(name: "CASK Pub and Kitchen", image: "caskpubkitchen")
     ]
-    
-    @State private var selectedRestaurant: Restaurant?
     
     var body: some View {
         List {
@@ -57,6 +58,37 @@ struct ContentView: View {
                                 Image(systemName:"star")
                             }
                         }
+                    }
+                    .onTapGesture {
+//                        self.showActionSheet.toggle()
+                        self.selectedRestaurant = restaurant
+                    }
+//                    .actionSheet(isPresented:self.$showActionSheet){
+//                        ActionSheet(title:Text("What do you want to do"),message:nil,buttons: [
+//                            .default(Text("Mark as Favorite"),action: {
+//                                if let selectedRestaurant = self.selectedRestaurant{
+//                                    self.setFavorite(item: selectedRestaurant)
+//                                }
+//                            }),
+//                            .destructive(Text("Delete"),action:{
+//                                if let selectedRestaurant = self.selectedRestaurant {
+//                                    self.delete(item: selectedRestaurant)
+//                                }
+//                            }),
+//                            .cancel()
+//                        ])
+//                    }
+                    .actionSheet(item:self.$selectedRestaurant){
+                        restaurant in
+                        ActionSheet(title: Text("What you want to do"),message: nil,buttons:[
+                            .default(Text("Mark as Favorite"),action: {
+                                self.setFavorite(item: restaurant)
+                            }),
+                            .destructive(Text("Delete"),action:{
+                                self.delete(item:restaurant)
+                            }),
+                            .cancel()
+                        ])
                     }
             }
             .onDelete { (indexSet) in
