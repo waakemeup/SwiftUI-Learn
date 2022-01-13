@@ -37,10 +37,49 @@ struct ContentView: View {
         List {
             ForEach(restaurants) { restaurant in
                 BasicImageRow(restaurant: restaurant)
+                    .contextMenu {
+                        Button(action:{
+                            //delete the selected image
+                            self.delete(item: restaurant)
+                        }){
+                            HStack{
+                                Text("Delete")
+                                Image(systemName:"trash")
+                            }
+                        }
+                        
+                        Button(action:{
+                            //make the selected image favor
+                            self.setFavorite(item: restaurant)
+                        }){
+                            HStack{
+                                Text("Favorite")
+                                Image(systemName:"star")
+                            }
+                        }
+                    }
             }
-
+            .onDelete { (indexSet) in
+                self.restaurants.remove(atOffsets: indexSet)
+            }
         }
     }
+    private func delete(item restaurant:Restaurant){
+        if let index = self.restaurants.firstIndex(where:{
+            $0.id == restaurant.id
+        }){
+            self.restaurants.remove(at:index)
+        }
+    }
+    
+    private func setFavorite(item restaurant:Restaurant){
+        if let index = self.restaurants.firstIndex(where: {
+            $0.id == restaurant.id
+        }){
+            self.restaurants[index].isFavorite.toggle()
+        }
+    }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
@@ -67,6 +106,12 @@ struct BasicImageRow: View {
                 .frame(width: 40, height: 40)
                 .cornerRadius(5)
             Text(restaurant.name)
+            
+            if restaurant.isFavorite {
+                Spacer()
+                Image(systemName:"star.fill")
+                    .foregroundColor(.yellow)
+            }
             
         }
     }
