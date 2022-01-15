@@ -11,6 +11,8 @@
 		E510A9DF2792EEEB002BA2EC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E510A9DE2792EEEB002BA2EC /* ContentView.swift */; };
 		E510A9E12792EEEF002BA2EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E510A9E02792EEEF002BA2EC /* Assets.xcassets */; };
 		E510A9E42792EEEF002BA2EC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E510A9E32792EEEF002BA2EC /* Preview Assets.xcassets */; };
+		E5A2FC65279317E10016C048 /* CombineGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A2FC64279317E10016C048 /* CombineGesture.swift */; };
+		E5A2FC69279322FD0016C048 /* DraggableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A2FC68279322FD0016C048 /* DraggableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		E510A9DE2792EEEB002BA2EC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E510A9E02792EEEF002BA2EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E510A9E32792EEEF002BA2EC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E5A2FC64279317E10016C048 /* CombineGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineGesture.swift; sourceTree = "<group>"; };
+		E5A2FC68279322FD0016C048 /* DraggableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraggableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,8 @@
 			children = (
 				E510A9DC2792EEEB002BA2EC /* GestureApp.swift */,
 				E510A9DE2792EEEB002BA2EC /* ContentView.swift */,
+				E5A2FC64279317E10016C048 /* CombineGesture.swift */,
+				E5A2FC68279322FD0016C048 /* DraggableView.swift */,
 				E510A9E02792EEEF002BA2EC /* Assets.xcassets */,
 				E510A9E22792EEEF002BA2EC /* Preview Content */,
 			);
@@ -138,6 +144,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E510A9DF2792EEEB002BA2EC /* ContentView.swift in Sources */,
+				E5A2FC69279322FD0016C048 /* DraggableView.swift in Sources */,
+				E5A2FC65279317E10016C048 /* CombineGesture.swift in Sources */,
 				E510A9DD2792EEEB002BA2EC /* GestureApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
