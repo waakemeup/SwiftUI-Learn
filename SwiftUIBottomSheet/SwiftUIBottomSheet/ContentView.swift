@@ -25,10 +25,12 @@ struct ContentView: View {
                 }
                 .navigationBarTitle("Restaurants")
             }
+            .offset(y:showDetail ? -100 : 0)
+            .animation(.easeOut(duration:0.2))
             
             if showDetail {
                 if let selectedRestaurant = selectedRestaurant{
-                    RestaurantDetailView(restaurant: selectedRestaurant)
+                    RestaurantDetailView(isShow:$showDetail,restaurant: selectedRestaurant)
                         .transition(.move(edge: .bottom))
                 }
             }
@@ -55,3 +57,5 @@ struct BasicImageRow:View {
         }
     }
 }
+
+

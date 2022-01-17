@@ -8,6 +8,12 @@
 import SwiftUI
 
 struct RestaurantDetailView: View {
+    @GestureState private var dragState = DragState.inactive
+    @State private var positionOffset:CGFloat = 0.0
+    @State private var viewState = ViewState.half
+    @State private var scrollOffset:CGFloat = 0.0
+    @Binding var isShow:Bool
+    
     let restaurant:Restaurant
     var body: some View {
         GeometryReader{ geometry in
@@ -18,26 +24,68 @@ struct RestaurantDetailView: View {
                 
                 ScrollView(.vertical){
                         
-                    TitleBar()
+                    GeometryReader {scrollViewProxy in
+//                        Text("\(scrollViewProxy.frame(in: .named("scrollview")).minY)")
+                        Color.clear.preference(key: ScrollOffsetKey.self, value: scrollViewProxy.frame(in: .named("scrollview")).minY)
+                            .frame(height:0)
+                    }
                     
-                    HeaderView(restaurant:self.restaurant )
-                    
-                    DetailInfoView(icon: "map", info: self.restaurant.location).padding(.top)
-                    DetailInfoView(icon: "phone", info: self.restaurant.phone)
-                    DetailInfoView(icon: nil, info: self.restaurant.description).padding(.top)
+                    VStack {
+                        TitleBar()
+                        HeaderView(restaurant:self.restaurant )
+                        
+                        DetailInfoView(icon: "map", info: self.restaurant.location).padding(.top)
+                        DetailInfoView(icon: "phone", info: self.restaurant.phone)
+                        DetailInfoView(icon: nil, info: self.restaurant.description)
+                            .padding(.top)
+                            .padding(.bottom,100)
+                    }
+                    .offset(y:-self.scrollOffset)
+                    .animation(nil)
                 }
+                .disabled(self.viewState == .half)
                 .background(.white)
                 .cornerRadius(10,antialiased: true)
+                .coordinateSpace(name: "scrollview")
             }
-            .offset(y:geometry.size.height/2)
+            .offset(y:geometry.size.height/2 + self.dragState.translation.height + self.positionOffset)
+            .offset(y:self.scrollOffset)
+            .animation(.interactiveSpring(response: 1, dampingFraction: 0.86, blendDuration: 0.25))
             .edgesIgnoringSafeArea(.all)
+            .gesture(DragGesture()
+                        .updating(self.$dragState, body: {(value,state,transaction) in state = .dragging(translation: value.translation)})
+                        .onEnded({(value) in
+                            if self.viewState == .half{
+                                if value.translation.height < -geometry.size.height * 0.25{
+                                    self.positionOffset = -geometry.size.height/2 + 50
+                                    self.viewState = .full
+                                }
+                                if value.translation.height > geometry.size.height * 0.3 {
+                                    self.isShow = false
+                                }
+                            }
+                    
+                        })
+            )
+            .onPreferenceChange(ScrollOffsetKey.self){ value in
+                if self.viewState == .full {
+                    self.scrollOffset = value > 0 ? value : 0
+                    if self.scrollOffset > 120 {
+                        self.positionOffset = 0
+                        self.viewState = .half
+                        self.scrollOffset = 0
+                    }
+                }
+            }
+        
+            
         }
     }
 }
 
 struct RestaurantDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        RestaurantDetailView(restaurant: restaurants[0])
+        RestaurantDetailView(isShow:.constant(true),restaurant: restaurants[0])
             .background(Color.black.opacity(0.3))
             .edgesIgnoringSafeArea(.all)
     }
@@ -118,4 +166,45 @@ struct DetailInfoView:View {
     }
 }
 
+enum DragState {
+    case inactive
+    case pressing
+    case dragging(translation:CGSize)
+    
+    var translation:CGSize {
+        switch self {
+        case .inactive,.pressing:
+            return .zero
+        case .dragging(let translation):
+            return translation
+        }
+    }
+    
+    var isDragging:Bool {
+        switch self {
+        case .pressing,.dragging:
+            return true
+        case .inactive:
+            return false
+        }
+    }
+    
+    
+}
 
+
+enum ViewState {
+    case full
+    case half
+}
+
+
+struct ScrollOffsetKey:PreferenceKey {
+    typealias Value = CGFloat
+    
+    static var defaultValue = CGFloat.zero
+    
+    static func reduce(value:inout Value,nextValue:()->Value){
+        value += nextValue()
+    }
+}
