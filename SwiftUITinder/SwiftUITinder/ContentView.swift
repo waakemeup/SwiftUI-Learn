@@ -10,8 +10,10 @@ import SwiftUI
 struct ContentView: View {
     @GestureState private var dragState = DragState.inactive
     private let dragThreshold:CGFloat = 80.0
+    @State private var lastIndex = 1
+    @State private var removeTransition = AnyTransition.trailingBottom
     
-    var cardViews:[CardView] = {
+    @State var cardViews:[CardView] = {
         var views = [CardView]()
         
 //        for trip in trips {
@@ -51,6 +53,7 @@ struct ContentView: View {
                         .rotationEffect(Angle(degrees:
                                                 self.isTopCard(cardView: cardView) ?     Double(self.dragState.translation.width/10):0))
                         .animation(.interactiveSpring(response: 1, dampingFraction: 0.3, blendDuration:0.5 ))
+                        .transition(self.removeTransition)
                         .gesture(LongPressGesture(minimumDuration:0.01)
                                     .sequenced(before: DragGesture())
                                     .updating(self.$dragState,body: {(value,state,transaction) in
@@ -62,6 +65,28 @@ struct ContentView: View {
                             default:
                                 break
                             }
+                        })
+                                    .onChanged({(value) in
+                            guard case .second(true,let drag?) = value else {
+                                return
+                            }
+                            
+                            if drag.translation.width < -self.dragThreshold {
+                                self.removeTransition = .leadingBottom
+                            }
+                            if drag.translation.width > self.dragThreshold {
+                                self.removeTransition = .trailingBottom
+                            }
+                        })
+                                    .onEnded({(value) in
+                            guard case .second(true,let drag?) = value else {
+                                return
+                            }
+                            
+                            if drag.translation.width < -self.dragThreshold || drag.translation.width > self.dragThreshold{
+                                self.movedCard()
+                            }
+                            
                         })
                         )
                 }
@@ -79,6 +104,15 @@ struct ContentView: View {
             return false
         }
         return index == 0
+    }
+    
+    private func movedCard(){
+        cardViews.removeFirst()
+        self.lastIndex += 1
+        let trip = trips[lastIndex % trips.count]
+        let newCardView = CardView(image:trip.image,title:trip.destination)
+        
+        cardViews.append(newCardView)
     }
 
 }
@@ -171,4 +205,21 @@ enum DragState {
         }
     }
     
+}
+
+
+extension AnyTransition {
+    static var trailingBottom:AnyTransition {
+        AnyTransition.asymmetric(
+            insertion:.identity,
+            removal: AnyTransition.move(edge: .trailing).combined(with: .move(edge: .bottom))
+        )
+    }
+    
+    static var leadingBottom:AnyTransition {
+        AnyTransition.asymmetric(
+            insertion: .identity,
+            removal: AnyTransition.move(edge: .leading).combined(with: .move(edge: .bottom))
+        )
+    }
 }
