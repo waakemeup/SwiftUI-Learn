@@ -12,6 +12,7 @@
 		E5D12A2E279703BA00AEFFC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5D12A2D279703BA00AEFFC4 /* Assets.xcassets */; };
 		E5D12A31279703BA00AEFFC4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5D12A30279703BA00AEFFC4 /* Preview Assets.xcassets */; };
 		E5D12A382797044000AEFFC4 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D12A372797044000AEFFC4 /* Trip.swift */; };
+		E5D12A3A2797087400AEFFC4 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D12A392797087400AEFFC4 /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		E5D12A2D279703BA00AEFFC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E5D12A30279703BA00AEFFC4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E5D12A372797044000AEFFC4 /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
+		E5D12A392797087400AEFFC4 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 				E5D12A29279703B700AEFFC4 /* SwiftUITinderApp.swift */,
 				E5D12A2B279703B700AEFFC4 /* ContentView.swift */,
 				E5D12A372797044000AEFFC4 /* Trip.swift */,
+				E5D12A392797087400AEFFC4 /* CardView.swift */,
 				E5D12A2D279703BA00AEFFC4 /* Assets.xcassets */,
 				E5D12A2F279703BA00AEFFC4 /* Preview Content */,
 			);
@@ -142,6 +145,7 @@
 			files = (
 				E5D12A382797044000AEFFC4 /* Trip.swift in Sources */,
 				E5D12A2C279703B700AEFFC4 /* ContentView.swift in Sources */,
+				E5D12A3A2797087400AEFFC4 /* CardView.swift in Sources */,
 				E5D12A2A279703B700AEFFC4 /* SwiftUITinderApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
