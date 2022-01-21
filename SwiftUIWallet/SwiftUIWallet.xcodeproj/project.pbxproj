@@ -8,23 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		E508EF5A27999BE5009423DC /* SwiftUIWalletApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E508EF5927999BE5009423DC /* SwiftUIWalletApp.swift */; };
-		E508EF5C27999BE5009423DC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E508EF5B27999BE5009423DC /* ContentView.swift */; };
 		E508EF5E27999BE9009423DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E508EF5D27999BE9009423DC /* Assets.xcassets */; };
 		E508EF6127999BE9009423DC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E508EF6027999BE9009423DC /* Preview Assets.xcassets */; };
 		E508EF6A27999EF2009423DC /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = E508EF6927999EF2009423DC /* Card.swift */; };
 		E508EF6C2799A08A009423DC /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E508EF6B2799A08A009423DC /* Transaction.swift */; };
 		E508EF6E2799A1F9009423DC /* TransactionHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E508EF6D2799A1F9009423DC /* TransactionHistoryView.swift */; };
+		E564B233279A49B800877B10 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E564B232279A49B800877B10 /* CardView.swift */; };
+		E564B235279A4F6C00877B10 /* WalletView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E564B234279A4F6C00877B10 /* WalletView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E508EF5627999BE5009423DC /* SwiftUIWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E508EF5927999BE5009423DC /* SwiftUIWalletApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIWalletApp.swift; sourceTree = "<group>"; };
-		E508EF5B27999BE5009423DC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E508EF5D27999BE9009423DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E508EF6027999BE9009423DC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E508EF6927999EF2009423DC /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		E508EF6B2799A08A009423DC /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		E508EF6D2799A1F9009423DC /* TransactionHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionHistoryView.swift; sourceTree = "<group>"; };
+		E564B232279A49B800877B10 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		E564B234279A4F6C00877B10 /* WalletView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,8 +88,9 @@
 		E508EF6827999D75009423DC /* VIew */ = {
 			isa = PBXGroup;
 			children = (
-				E508EF5B27999BE5009423DC /* ContentView.swift */,
 				E508EF6D2799A1F9009423DC /* TransactionHistoryView.swift */,
+				E564B232279A49B800877B10 /* CardView.swift */,
+				E564B234279A4F6C00877B10 /* WalletView.swift */,
 			);
 			path = VIew;
 			sourceTree = "<group>";
@@ -162,10 +165,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E508EF5C27999BE5009423DC /* ContentView.swift in Sources */,
 				E508EF5A27999BE5009423DC /* SwiftUIWalletApp.swift in Sources */,
 				E508EF6C2799A08A009423DC /* Transaction.swift in Sources */,
+				E564B235279A4F6C00877B10 /* WalletView.swift in Sources */,
 				E508EF6E2799A1F9009423DC /* TransactionHistoryView.swift in Sources */,
+				E564B233279A49B800877B10 /* CardView.swift in Sources */,
 				E508EF6A27999EF2009423DC /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
