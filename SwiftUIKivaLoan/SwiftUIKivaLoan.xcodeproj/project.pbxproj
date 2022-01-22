@@ -13,6 +13,8 @@
 		E553F741279B9178002FF030 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E553F740279B9178002FF030 /* Preview Assets.xcassets */; };
 		E553F748279B9262002FF030 /* Loan.swift in Sources */ = {isa = PBXBuildFile; fileRef = E553F747279B9262002FF030 /* Loan.swift */; };
 		E553F74A279B965A002FF030 /* LoanStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E553F749279B965A002FF030 /* LoanStore.swift */; };
+		E553F74C279BA556002FF030 /* LoanCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E553F74B279BA556002FF030 /* LoanCellView.swift */; };
+		E553F74E279BABAE002FF030 /* LoanFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E553F74D279BABAE002FF030 /* LoanFilterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		E553F740279B9178002FF030 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E553F747279B9262002FF030 /* Loan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loan.swift; sourceTree = "<group>"; };
 		E553F749279B965A002FF030 /* LoanStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanStore.swift; sourceTree = "<group>"; };
+		E553F74B279BA556002FF030 /* LoanCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanCellView.swift; sourceTree = "<group>"; };
+		E553F74D279BABAE002FF030 /* LoanFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanFilterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,8 +61,10 @@
 			children = (
 				E553F739279B9175002FF030 /* SwiftUIKivaLoanApp.swift */,
 				E553F73B279B9175002FF030 /* ContentView.swift */,
+				E553F74D279BABAE002FF030 /* LoanFilterView.swift */,
 				E553F747279B9262002FF030 /* Loan.swift */,
 				E553F749279B965A002FF030 /* LoanStore.swift */,
+				E553F74B279BA556002FF030 /* LoanCellView.swift */,
 				E553F73D279B9178002FF030 /* Assets.xcassets */,
 				E553F73F279B9178002FF030 /* Preview Content */,
 			);
@@ -145,6 +151,8 @@
 			files = (
 				E553F73C279B9175002FF030 /* ContentView.swift in Sources */,
 				E553F74A279B965A002FF030 /* LoanStore.swift in Sources */,
+				E553F74E279BABAE002FF030 /* LoanFilterView.swift in Sources */,
+				E553F74C279BA556002FF030 /* LoanCellView.swift in Sources */,
 				E553F748279B9262002FF030 /* Loan.swift in Sources */,
 				E553F73A279B9175002FF030 /* SwiftUIKivaLoanApp.swift in Sources */,
 			);
